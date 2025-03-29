@@ -63,7 +63,7 @@ const MindEase = () => {
   const generateStudyPlan = () => {
     let plan = [];
     for (let i = 1; i <= 3; i++) {
-      plan.push(`📚 Subject ${i}: Study for ${(studyTimer / 3).toFixed(2)} mins`);
+      plan.push(` Subject ${i}: Study for ${(studyTimer / 3).toFixed(2)} mins`);
     }
     setStudyPlan(plan);
   };
@@ -72,10 +72,10 @@ const MindEase = () => {
     <div className="app">
       <aside className="sidebar">
         <h2>MindEase Tools</h2>
-        <button onClick={() => setMotivation(motivationPrompts[Math.floor(Math.random() * motivationPrompts.length)])}>✨ Inspire Me!</button>
-        <button onClick={() => setAnxiety(anxietyReliefPrompts[Math.floor(Math.random() * anxietyReliefPrompts.length)])}>🧘 Anxiety Relief</button>
-        <button onClick={() => alert(studyTips[Math.floor(Math.random() * studyTips.length)])}>📖 Study Tips</button>
-        <button onClick={() => alert(selfCareTips[Math.floor(Math.random() * selfCareTips.length)])}>💆 Self-Care</button>
+        <button onClick={() => setMotivation(motivationPrompts[Math.floor(Math.random() * motivationPrompts.length)])}> Inspire Me!</button>
+        <button onClick={() => setAnxiety(anxietyReliefPrompts[Math.floor(Math.random() * anxietyReliefPrompts.length)])}> Anxiety Relief</button>
+        <button onClick={() => alert(studyTips[Math.floor(Math.random() * studyTips.length)])}>Study Tips</button>
+        <button onClick={() => alert(selfCareTips[Math.floor(Math.random() * selfCareTips.length)])}> Self-Care</button>
       </aside>
       
       <main className="content">
@@ -84,7 +84,7 @@ const MindEase = () => {
         <h3>{anxiety}</h3>
         
         <h2>Study Planner Generator</h2>
-        <button onClick={generateStudyPlan}>📅 Generate Study Plan</button>
+        <button onClick={generateStudyPlan}>Generate Study Plan</button>
         <ul>{studyPlan.map((item, index) => <li key={index}>{item}</li>)}</ul>
 
         <h2>Daily Affirmation</h2>
